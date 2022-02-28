@@ -80,6 +80,11 @@ module.exports = {
         classPropertiesAllowed: false,
       },
     ],
+    // 全ての関数を arrow function にする
+    'react/function-component-definition': [
+      2,
+      { namedComponents: 'arrow-function' },
+    ],
     // eslint-config-airbnb で .jsx のみになっているので拡張
     'react/jsx-filename-extension': [
       'error',
