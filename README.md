@@ -175,7 +175,7 @@ tsconfig.eslint.json
 ```
 
 ```
-touch .eslintignore
+vi .eslintignore
 ```
 
 ```
@@ -186,4 +186,35 @@ public/
 **/*.min.js
 *.config.js
 .*lintrc.js
+```
+
+## prettier
+
+```
+yarn add -D prettier eslint-config-prettier
+yarn
+```
+
+```
+vi .prettierrc
+```
+
+```
+singleQuote: true
+trailingComma: "all"
+```
+
+(eslint と prettier が競合してないかを確認)
+
+```
+npx eslint-config-prettier 'src/**/*.{js,jsx,ts,tsx}'
+```
+
+```
+package.json
+"scripts": {
+  ...
+  "fix": "npm run -s format && npm run -s lint:fix",
+  "format": "prettier --write --loglevel=warn '{public,src}/**/*.{js,jsx,ts,tsx,html,gql,graphql,json}'",
+},
 ```
