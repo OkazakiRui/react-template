@@ -253,3 +253,19 @@ yarn husky install
 ```
 yarn husky add .husky/pre-commit "yarn fix"
 ```
+
+## commit lint
+
+```
+yarn add -D @commitlint/{config-conventional,cli}
+vi .commitlintrc.yml
+```
+
+```
+extends:
+  - '@commitlint/config-conventional'
+```
+
+```
+npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
+```
