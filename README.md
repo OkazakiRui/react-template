@@ -138,6 +138,8 @@ typesync; yarn
     ],
     // jsxを記述する際にreactをimportするのを強制するのを無効にした
     'react/react-in-jsx-scope': 'off',
+    // Promise を未処理にしたいケースがあるため無効にした
+    '@typescript-eslint/no-floating-promises': 'off',
   },
   overrides: [
     {
