@@ -37,6 +37,7 @@ The config that you've selected requires the following dependencies: 各種パ�
 
 ```
 yarn add -D 各種パッケージ
+yarn -D add eslint-plugin-prefer-arrow
 typesync; yarn
 ```
 
@@ -202,6 +203,12 @@ vi .prettierrc
 ```
 singleQuote: true
 trailingComma: "all"
+```
+
+(eslint のプラグインが足りてるかを確認)
+
+```
+yarn lint
 ```
 
 (eslint と prettier が競合してないかを確認)
