@@ -232,3 +232,21 @@ package.json
   "format": "prettier --write --loglevel=warn '{public,src}/**/*.{js,jsx,ts,tsx,html,gql,graphql,json}'",
 },
 ```
+
+## husky
+
+```
+yarn add -D husky
+yarn husky install
+```
+
+```
+"scripts": {
+  ...
+  "prepare": "husky install"
+}
+```
+
+```
+yarn husky add .husky/pre-commit "yarn fix"
+```
