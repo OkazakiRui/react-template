@@ -140,6 +140,9 @@ typesync; yarn
     'react/react-in-jsx-scope': 'off',
     // Promise を未処理にしたいケースがあるため無効にした
     '@typescript-eslint/no-floating-promises': 'off',
+    // アップデートに伴い import React from 'react' がエラー扱いとなってしまうのを修正した
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
   },
   overrides: [
     {
