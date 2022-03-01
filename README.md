@@ -43,6 +43,16 @@ typesync; yarn
 ```
 
 ```
+package.json
+"scripts": {
+  ...
+  "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+  "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+  "preinstall": "typesync || :"
+}
+```
+
+```
 .eslintrc.js
 {
   extends: [
@@ -53,7 +63,6 @@ typesync; yarn
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'prettier',
   ],
   parserOptions: {
     ...
@@ -167,11 +176,10 @@ typesync; yarn
 ```
 
 ```
-touch tsconfig.eslint.json
+vi tsconfig.eslint.json
 ```
 
 ```
-tsconfig.eslint.json
 {
   "extends": "./tsconfig.json",
   "include": [
@@ -214,6 +222,16 @@ vi .prettierrc
 ```
 singleQuote: true
 trailingComma: "all"
+```
+
+```
+.eslintrc.js
+{
+  extends: [
+    ...
+    'prettier',
+  ],
+}
 ```
 
 ```
