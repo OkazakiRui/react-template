@@ -216,6 +216,15 @@ singleQuote: true
 trailingComma: "all"
 ```
 
+```
+package.json
+"scripts": {
+  ...
+  "fix": "npm run -s format && npm run -s lint:fix",
+  "format": "prettier --write --loglevel=warn '{public,src}/**/*.{js,jsx,ts,tsx,html,gql,graphql,json}'",
+},
+```
+
 (eslint のプラグインが足りてるかを確認)
 
 ```
@@ -228,14 +237,6 @@ yarn lint
 npx eslint-config-prettier 'src/**/*.{js,jsx,ts,tsx}'
 ```
 
-```
-package.json
-"scripts": {
-  ...
-  "fix": "npm run -s format && npm run -s lint:fix",
-  "format": "prettier --write --loglevel=warn '{public,src}/**/*.{js,jsx,ts,tsx,html,gql,graphql,json}'",
-},
-```
 
 ## husky
 
