@@ -38,7 +38,7 @@ The config that you've selected requires the following dependencies: 各種パ�
 
 ```
 yarn add -D 各種パッケージ
-yarn add -D eslint-plugin-prefer-arrow
+yarn add -D eslint-plugin-prefer-arrow eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react-hooks
 typesync; yarn
 ```
 
