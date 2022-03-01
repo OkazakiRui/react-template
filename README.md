@@ -1,9 +1,10 @@
 # 環境作成
 
-## cra
+## create react app
 
 ```
-npx create-react-app . --template typescript; yarn
+npx create-react-app . --template typescript
+yarn
 ```
 
 ## eslint
@@ -268,4 +269,16 @@ extends:
 
 ```
 npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
+```
+
+## storybook
+
+```
+npx sb init
+```
+
+```
+.eslintignore
+**/*.stories.*
+**/stories/
 ```
